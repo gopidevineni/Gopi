@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     options{
-        properties([pipelineTriggers([cron('5 12 * * *')])])
+        properties([pipelineTriggers([cron('6 12 * * *')])])
     }
 
         stages {
