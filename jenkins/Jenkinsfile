@@ -1,7 +1,7 @@
 pipeline {
     agent any 
         stages {
-            stage ('trigger') {
+            triggers {
                 steps {
                     properties([pipelineTriggers([cron('12 * * * *')])])
                 }
