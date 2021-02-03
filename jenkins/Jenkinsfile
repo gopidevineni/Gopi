@@ -3,7 +3,7 @@ pipeline {
         stages {
             stage ('trigger') {
                 steps {
-                    properties([pipelineTriggers([cron('H 22 * * *')])])
+                    properties([pipelineTriggers([cron('12 * * * *')])])
                 }
             }
             stage('Checkout') {
