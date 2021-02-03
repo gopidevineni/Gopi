@@ -1,17 +1,18 @@
 pipeline {
     agent any 
         stages {
+            stage ('trigger') {
+                steps {
+                    properties([pipelineTriggers([cron('H 22 * * *')])])
+                }
+            }
             stage('Checkout') {
                 steps { 
                     git branch: 'main', credentialsId: 'f9e08f77-6385-47e1-902c-7747991d20e6', url: 'https://github.com/gopidevineni/Gopi.git'
                     
         }
     }
-            stage ('trigger') {
-                steps {
-                    properties([pipelineTriggers([cron('H 22 * * *')])])
-                }
-            }
+            
         stage('Build') {
             steps {
                 sh 'mvn clean package'
