@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     options([
-                        pipelineTriggers([cron('12 1 * * *')])
+                        pipelineTriggers([cron('12 2 * * *')])
                     ])
         stages {
             stage('Checkout') {
