@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                    bat '''mvn -B -DskipTests clean package'''
-                    bat '''echo Maven Build is compleed'''
+                    bat "mvn -B -DskipTests clean package"
+                    bat "Maven Build is compleed"
             }
         }
         stage('Test') {
